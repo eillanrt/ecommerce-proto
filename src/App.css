@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: rgba(0, 2555, 0, 0.5);*/
+}
+
+html {
+  font-size: 16px;
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+form {
+  width: 500px;
+  margin: 130px auto 30px;
+}
+
+form > * {
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  font-size: 1.1rem;
+}
+
+.products-container {
+  margin: auto;
+  display: grid;
+  width: 90%;
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.no-result {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 40vh;
+}
+
+@media (max-width: 600px) {
+  .product,
+  form {
+    width: 90%;
+  }
+}

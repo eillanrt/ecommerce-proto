@@ -1,0 +1,37 @@
+
+footer {
+  background-color: #343434;
+  color: white;
+  display: flex;
+  height: 80px;
+  margin-top: 40px;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .socials {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: black;
+}
+
+footer p {
+  margin: 0;
+}
