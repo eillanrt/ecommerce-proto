@@ -33,7 +33,7 @@ class App extends React.Component {
     }
   }
 
-  getProducts() {
+  async getProducts() {
     this.setState({ products: [], filteredProducts: [], searchValue: "" });
     const base =
       this.state.category === "products"
@@ -41,13 +41,9 @@ class App extends React.Component {
         : "https://fakestoreapi.com/products/category/" +
           encodeURIComponent(this.state.category);
 
-    fetch(base)
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          products: data,
-        });
-      });
+    const response = await fetch(base);
+    const products = await response.json();
+    this.setState({ products });
   }
 
   handleSearchChange(event) {
